@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Animation_Homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENR-aq-zlw">
+                                <rect key="frame" x="0.0" y="734" width="375" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.14836193389999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kax-e3-MnM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Slide to pause &gt;&gt;&gt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="caD-pR-uF1" appends="YES" id="1Rm-0B-wDd"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9ay-Oo-C5D">
+                                <rect key="frame" x="-375" y="734" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXq-XA-ayY">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.33333333333334" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.46964674317110455" blue="0.45076966249280159" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Finish">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8c-W2-Vy6">
+                                        <rect key="frame" x="187.33333333333337" y="0.0" width="187.66666666666663" height="44"/>
+                                        <color key="backgroundColor" red="0.22665300463879523" green="1" blue="0.54598243925971346" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Resume">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resumeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kc2-tG-d3s"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ENR-aq-zlw" secondAttribute="bottom" id="7g2-af-t2S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ENR-aq-zlw" secondAttribute="trailing" identifier="slideToPauseButtonRightConstraint" id="ASc-Jf-Zzl"/>
+                            <constraint firstItem="9ay-Oo-C5D" firstAttribute="width" secondItem="ENR-aq-zlw" secondAttribute="width" id="GUN-bt-pr1"/>
+                            <constraint firstItem="ENR-aq-zlw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="XHG-y3-GIm"/>
+                            <constraint firstItem="9ay-Oo-C5D" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dUM-i0-NlN"/>
+                            <constraint firstItem="9ay-Oo-C5D" firstAttribute="trailing" secondItem="ENR-aq-zlw" secondAttribute="leading" id="mje-DZ-B0G"/>
+                            <constraint firstItem="9ay-Oo-C5D" firstAttribute="height" secondItem="ENR-aq-zlw" secondAttribute="height" id="rBl-9c-hDJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="finishButton" destination="JXq-XA-ayY" id="KA5-Cr-sic"/>
+                        <outlet property="finishResumeStack" destination="9ay-Oo-C5D" id="OIA-ty-9N7"/>
+                        <outlet property="resumeButton" destination="D8c-W2-Vy6" id="dbX-xM-GrZ"/>
+                        <outlet property="slideToPauseButton" destination="ENR-aq-zlw" id="m5y-Ca-rTn"/>
+                        <outlet property="slidebleButtonConstraint" destination="ASc-Jf-Zzl" id="U3g-jf-vGi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer delaysTouchesEnded="NO" direction="right" id="caD-pR-uF1">
+                    <connections>
+                        <action selector="buttonSlided:" destination="BYZ-38-t0r" id="qAJ-LJ-Eaf"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
